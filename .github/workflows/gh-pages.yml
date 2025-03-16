@@ -1,5 +1,9 @@
 ---
-name: Deploy site to Pages
+  - name: Build
+    env:
+      BASE_URL: ${{ vars.BASE_URL }}
+      SITE_URL: ${{ vars.SITE_URL }}
+    run: npm run build
 
 on:
   # Runs on pushes targeting the default branch
